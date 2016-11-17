@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Basic Comical NC';
+    src: local('Basic Comical Regular NC'), local('BasicComicaRegularNC'), url('basiccomicalregularnc.woff2') format('woff2'), url('basiccomicalregularnc.woff') format('woff'), url('basiccomicalregularnc.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Basic Comical NC';
+    src: local('Basic Comical Italic NC'), local('BasicComicalItalicNC'), url('basiccomicalitalicnc.woff2') format('woff2'), url('basiccomicalitalicnc.woff') format('woff'), url('basiccomicalitalicnc.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}

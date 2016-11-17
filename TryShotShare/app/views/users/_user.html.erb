@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag '_user' %>
+
+<div class="container" id="cont">
+  <div class="jumbotron">
+    <div class="refresh">
+      <%= link_to(image_tag("refresh.png"), user, method: :get, remote: true) %>
+    </div>
+    <% if user.uploads.empty? %>
+      <p align="center" class="no_photo">No photos</p>
+    <% else %>
+      <%= render(user.uploads) %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+  <div class="eachPhoto">
+    <%= image_tag(upload.image.url(:thumb), :class => "img_preview") %>
+      <ul class="sub-menu">
+        <li><a href="<%= @user["id"] %>/uploads/<%= upload["id"] %>/edit">Edit</a></li>
+        <li><a href="#2">Download</a></li>
+      </ul>      
+  </div>
+
+  <style type="text/css">
+  	.selected {
+  		border: 2px solid yellow;
+  	}
+  </style>
+  <script type="text/javascript">
+  	var photos = document.getElementsByClassName('img_preview');
+  	for (var i = 0; i < photos.length; i++){
+  		photos[i].onclick = function(){
+  			if(this.classList.contains("selected")){
+  				this.classList.remove("selected");
+  			} else {
+  			this.classList.add("selected");
+  			console.log(this.src);
+  		}
+  	}
+  }
+  </script>

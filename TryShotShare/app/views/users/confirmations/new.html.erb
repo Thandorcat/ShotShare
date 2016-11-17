@@ -1,0 +1,40 @@
+<style type="text/css">
+	.resend_instruction_back {
+		background: rgba(255,255,255,0.7);
+		width: 100%;
+		height: 90px;
+	}
+
+	.resend_instruction {
+		margin-left: 30px;
+	}
+
+	.control-label {
+		margin-left: 15px;
+		font-family: 'Basic Comical NC';
+		font-size: 20px; 
+	}
+
+
+</style>
+
+
+
+
+
+
+<div class="resend_instruction_back">
+<div class="resend_instruction">
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, class: 'form-horizontal' }) do |f| %>
+  <%= devise_error_messages! %>
+
+    <%= f.label :email, class:"control-label" %><br />
+    <div class="col-sm-2">
+      <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: "form-control"  %>
+    </div>
+
+    <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary' %>
+  
+<% end %>
+</div>
+</div>
