@@ -1,0 +1,29 @@
+<style type="text/css">
+  .avatar {
+    border-radius: 40%;
+  }
+  .name {
+    text-align: center;
+    font-size: 30px;
+  }
+  .each_user {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .each_user:first-child {
+    margin-left: 100px;
+  }
+</style>
+
+<div class="users">
+  <% @users.each do |user| %>
+    <% if user != current_user %>
+      <div class="each_user">
+        <%= link_to user_path(user) do %>
+          <%= image_tag(user.avatar.url(:medium), :class => "avatar") %>
+          <p class="name"><%= user.name %></p>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: yauheniyafimau
+  api_key: '163221647893184'
+  api_secret: t9FnXvy7t0JMu271CI9Im22Ac74
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: yauheniyafimau
+  api_key: '163221647893184'
+  api_secret: t9FnXvy7t0JMu271CI9Im22Ac74
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: yauheniyafimau
+  api_key: '163221647893184'
+  api_secret: t9FnXvy7t0JMu271CI9Im22Ac74
+  enhance_image_tag: true
+  static_image_support: false

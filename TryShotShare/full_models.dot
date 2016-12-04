@@ -1,0 +1,9 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"Upload" [shape=Mrecord, label="{Upload|id :INTEGER\lcreated_at :datetime\lupdated_at :datetime\limage_file_name :varchar\limage_content_type :varchar\limage_file_size :integer\limage_updated_at :datetime\luser_id :integer\lpublic_id :varchar\lurl :varchar\l}"]
+	"ApplicationRecord" []
+	"User" [shape=Mrecord, label="{User|id :INTEGER\lemail :varchar\lencrypted_password :varchar\lreset_password_token :varchar\lreset_password_sent_at :datetime\lremember_created_at :datetime\lsign_in_count :integer\lcurrent_sign_in_at :datetime\llast_sign_in_at :datetime\lcurrent_sign_in_ip :varchar\llast_sign_in_ip :varchar\lconfirmation_token :varchar\lconfirmed_at :datetime\lconfirmation_sent_at :datetime\lunconfirmed_email :varchar\lfailed_attempts :integer\lunlock_token :varchar\llocked_at :datetime\lcreated_at :datetime\lupdated_at :datetime\limage_file_name :varchar\limage_content_type :varchar\limage_file_size :integer\limage_updated_at :datetime\lname :varchar\l}"]
+	"ApplicationRecord" -> "Upload" [label="", arrowhead="none", arrowtail="onormal"]
+	"User" -> "Upload" [arrowtail=odot, arrowhead=crow, dir=both color="#22F5C8"]
+	"ApplicationRecord" -> "User" [label="", arrowhead="none", arrowtail="onormal"]
+}

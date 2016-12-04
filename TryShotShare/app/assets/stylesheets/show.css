@@ -1,0 +1,52 @@
+  #my-dropzone {
+        background: white;
+        border: black dashed 3px;
+        text-align: center;
+        color: black;
+        width: 550px;
+    }
+
+    .img_preview {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      position: relative;
+    }
+    
+    .sub-menu {
+      position: absolute;
+      display: none;
+    }
+
+    .eachPhoto {
+      display: inline-block;
+    }
+
+    .eachPhoto:hover .sub-menu {
+      display: block;
+    }
+
+    .eachPhoto .sub-menu {
+      z-index: 10;
+      list-style: none;
+      background: #0B4C5F;
+      width: 140px;
+      border: 2px solid black;
+    }
+
+    .eachPhoto .sub-menu li {
+      border-bottom: 1px solid black;
+    }
+
+    a {
+      color: white;
+    }
+
+    .jumbotron {
+      background-color: rgba(0,0,0,0.5)
+    }
+
+    .no_photo {
+      color: white;
+    }
+

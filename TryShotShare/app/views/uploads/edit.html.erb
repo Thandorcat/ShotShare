@@ -1,0 +1,31 @@
+<script type="text/javascript" src="http://feather.aviary.com/js/feather.js"></script>
+
+<script type='text/javascript'>
+	var featherEditor = new Aviary.Feather({
+		apiKey: '0728ddae97b84c04bcd6adf4ef7fd5dc',
+		apiVersion: 3,
+		theme: 'light', // Check out our new 'light' and 'dark' themes!
+		tools: 'all',
+		appendTo: '',
+		onSave: function(imageID, newURL) {
+			var img = document.getElementById('#image1');
+			img.src = "<%= "http://res.cloudinary.com/yauheniyafimau/image/upload/"+@upload["public_id"].to_s+"." + @upload["image_content_type"][6..-1].to_s %>";
+		},
+		onError: function(errorObj) {
+			alert(errorObj.message);
+		}
+	});
+	function launchEditor(id, src) {
+		featherEditor.launch({
+			image: id,
+			url: src
+		});
+		return false;
+	}
+	var imagepath = "<%= "http://res.cloudinary.com/yauheniyafimau/image/upload/" + @upload["public_id"].to_s + "." + @upload["image_content_type"][6..-1].to_s %>";
+</script>
+
+
+  <img id='image1' src="<%= "http://res.cloudinary.com/yauheniyafimau/image/upload/"+@upload["public_id"].to_s+"." + @upload["image_content_type"][6..-1].to_s %>"/>
+
+<p><input type='image' value='Edit photo' onclick="return launchEditor('image1',imagepath);" /></p>
